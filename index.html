@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            font-family: "Brush Script MT", cursive;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .login-form input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Instagram</h1>
+    </div>
+    <div class="login-form">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" value="Log in" onclick="login()">
+        <p><input type="checkbox" id="remember"> Remember me</p>
+        <p><a href="#">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="#">Sign up here.</a></p>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username == "" || password == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            alert("Logged in successfully!");
+        }
+    </script>
+</body>
+</html>
